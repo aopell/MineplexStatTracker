@@ -14,14 +14,14 @@
     <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="MineplexKillsDeaths.exe.manifest" size="3525">
+    <dependentAssembly dependencyType="install" codebase="MineplexKillsDeaths.exe.manifest" size="3999">
       <assemblyIdentity name="MineplexKillsDeaths.exe" version="1.1.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PDSeLs8+skg0quNAJdVaRA7dZvMBnsvpQQEUwqkTY6g=</dsig:DigestValue>
+        <dsig:DigestValue>X7mhWWXONW3+cus+5g7yiA4LDLNNhkHRiNZDbo7iB2k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="MineplexKillsDeaths.exe" version="1.1.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="MineplexKillsDeaths" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="MineplexKillsDeaths" version="1.2.5.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="MineplexKillsDeaths.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,17 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="60416">
-      <assemblyIdentity name="MineplexKillsDeaths" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="115200">
+      <assemblyIdentity name="MineplexKillsDeaths" version="1.2.5.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rEoUQ7OOx/aIuOfGTzbHBiR5pPotROdeKLYsN4exLE4=</dsig:DigestValue>
+        <dsig:DigestValue>vmP4JdF2rbtbTEhTcFYAjR6aNnDHPrsx1mklLmZ3Als=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="icon.ico" size="54063">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>t6y9XcclReg7EDKvzaYefkZwDkgg31ggDDj88SAUIPg=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="MineplexKillsDeaths.exe.config" size="2039">
     <hash>
       <dsig:Transforms>

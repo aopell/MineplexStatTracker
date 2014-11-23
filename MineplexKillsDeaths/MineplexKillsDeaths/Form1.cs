@@ -299,6 +299,14 @@ namespace MineplexStatTracker
                 deathList.BackColor = SystemColors.Window;
                 killList.ForeColor = DefaultForeColor;
                 deathList.ForeColor = DefaultForeColor;
+                foreach (Control c in Controls)
+                {
+                    if (c.GetType() == typeof(Button))
+                    {
+                        c.ForeColor = SystemColors.WindowText;
+                        c.BackColor = DefaultBackColor;
+                    }
+                }
             }
             else if (Settings.Default.Theme == "Nathan")
             {
@@ -316,6 +324,14 @@ namespace MineplexStatTracker
                 deathList.ForeColor = Color.Red;
                 killList.BackColor = Color.Yellow;
                 deathList.BackColor = Color.Yellow;
+                foreach (Control c in Controls)
+                {
+                    if (c.GetType() == typeof(Button))
+                    {
+                        c.ForeColor = Color.Red;
+                        c.BackColor = Color.Yellow;
+                    }
+                }
 
             }
             else if(Settings.Default.Theme == "Custom")
@@ -334,6 +350,14 @@ namespace MineplexStatTracker
                 deathList.ForeColor = Settings.Default.TextColor;
                 killList.BackColor = Settings.Default.BackColor;
                 deathList.BackColor = Settings.Default.BackColor;
+                foreach(Control c in Controls)
+                {
+                    if (c.GetType() == typeof(Button))
+                    {
+                        c.ForeColor = Settings.Default.TextColor;
+                        c.BackColor = Settings.Default.BackColor;
+                    }
+                }
             }
         }
 
