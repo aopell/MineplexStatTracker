@@ -26,11 +26,19 @@
     <UpdateUrl>https://github.com/aopell/MineplexStatTracker/blob/master/Newest/MineplexStatTracker.exe/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>7</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AssemblyInfoFilePath>Properties\AssemblyInfo.cs</AssemblyInfoFilePath>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.None.Increment.None</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>None.None.Increment.None</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.None.Increment.None</AssemblyInfoVersionSettings>
+    <ConfigurationFilter>Release</ConfigurationFilter>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

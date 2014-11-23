@@ -46,5 +46,41 @@ namespace MineplexStatTracker.Properties {
                 this["HideWindow"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        public string Theme {
+            get {
+                return ((string)(this["Theme"]));
+            }
+            set {
+                this["Theme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Window")]
+        public global::System.Drawing.Color BackColor {
+            get {
+                return ((global::System.Drawing.Color)(this["BackColor"]));
+            }
+            set {
+                this["BackColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("WindowText")]
+        public global::System.Drawing.Color TextColor {
+            get {
+                return ((global::System.Drawing.Color)(this["TextColor"]));
+            }
+            set {
+                this["TextColor"] = value;
+            }
+        }
     }
 }

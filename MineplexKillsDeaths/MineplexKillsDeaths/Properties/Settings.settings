@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MineplexKillsDeaths.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MineplexStatTracker.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Username" Type="System.String" Scope="User">
@@ -7,6 +7,15 @@
     </Setting>
     <Setting Name="HideWindow" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Theme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="BackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Window</Value>
+    </Setting>
+    <Setting Name="TextColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WindowText</Value>
     </Setting>
   </Settings>
 </SettingsFile>

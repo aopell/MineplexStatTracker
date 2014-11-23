@@ -52,6 +52,7 @@
             // 
             // killList
             // 
+            this.killList.BackColor = System.Drawing.SystemColors.Window;
             this.killList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.killList.FormattingEnabled = true;
             this.killList.Location = new System.Drawing.Point(12, 231);
@@ -252,8 +253,10 @@
             this.Name = "Form1";
             this.Text = "Mineplex Kills/Deaths Counter";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Enter += new System.EventHandler(this.Form1_Enter);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();

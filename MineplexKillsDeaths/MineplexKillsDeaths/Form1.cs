@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MineplexStatTracker.Properties;
 
 namespace MineplexStatTracker
 {
@@ -280,6 +281,53 @@ namespace MineplexStatTracker
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.Save();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            if(Settings.Default.Theme == "Default")
+            {
+                this.BackColor = DefaultBackColor;
+                label1.ForeColor = Color.Green;
+                label2.ForeColor = Color.Red;
+                label3.ForeColor = Color.Goldenrod;
+                gameLabel.ForeColor = SystemColors.HotTrack;
+                teamLabel.ForeColor = Color.DarkOrange;
+                killLabel.ForeColor = DefaultForeColor;
+                deathLabel.ForeColor = DefaultForeColor;
+                kdrLabel.ForeColor = DefaultForeColor;
+                rankLabel.ForeColor = Color.DarkViolet;
+            }
+            else if (Settings.Default.Theme == "Nathan")
+            {
+                this.BackColor = Color.Yellow;
+                label1.ForeColor = Color.Red;
+                label2.ForeColor = Color.Red;
+                label3.ForeColor = Color.Red;
+                gameLabel.ForeColor = Color.Red;
+                teamLabel.ForeColor = Color.Red;
+                killLabel.ForeColor = Color.Red;
+                deathLabel.ForeColor = Color.Red;
+                kdrLabel.ForeColor = Color.Red;
+                rankLabel.ForeColor = Color.Red;
+            }
+            else if(Settings.Default.Theme == "Custom")
+            {
+                this.BackColor = Settings.Default.BackColor;
+                label1.ForeColor = Settings.Default.TextColor;
+                label2.ForeColor = Settings.Default.TextColor;
+                label3.ForeColor = Settings.Default.TextColor;
+                gameLabel.ForeColor = Settings.Default.TextColor;
+                teamLabel.ForeColor = Settings.Default.TextColor;
+                killLabel.ForeColor = Settings.Default.TextColor;
+                deathLabel.ForeColor = Settings.Default.TextColor;
+                kdrLabel.ForeColor = Settings.Default.TextColor;
+                rankLabel.ForeColor = Settings.Default.TextColor;
+            }
+        }
+
+        private void Form1_Enter(object sender, EventArgs e)
+        {
         }
     }
 }
