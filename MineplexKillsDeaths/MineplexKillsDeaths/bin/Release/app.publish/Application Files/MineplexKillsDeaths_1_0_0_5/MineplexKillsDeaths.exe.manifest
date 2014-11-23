@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MineplexKillsDeaths.exe" version="1.0.0.5" publicKeyToken="b5e51ed5fe2fd242" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MineplexKillsDeaths" version="1.1.1.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MineplexKillsDeaths.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="56832">
+      <assemblyIdentity name="MineplexKillsDeaths" version="1.1.1.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>fwWBX0whhIFKORpRiLyIZfB9/3NtpMeUt1IcFHjkYO0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MineplexKillsDeaths.exe.config" size="1066">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cqMWUlVsa7LMOHmU+D8XhFAO6fsaNTIhWxD2XM1xMnM=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=AARON-DELL\Aaron" issuerKeyHash="fa8d6659f4fba038407d36cc6ff178c4bee099db" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7BjTw/4EeggQE94G1rD5ig7/GUBFNdLPpbUUne4hcNI=</DigestValue></Reference></SignedInfo><SignatureValue>FEL7aZvICIDN12CZ5Cg9WfKuru/jMic9D/EXJgTBawkffVf01QLIpEBGPzX8J8R99qGIUMAzAJm5qqo05DvpAR+DaEQJU/T10RN6v+03+vJSaIkSsqOzBCerNDoHogXx45a7jJLrha2sshx+ISP9Uw/KOdGDmjWAfEoSRdW9XhU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>nHD/Tw/H3aXSzUalCDgr7sejdhLd8gaKZLD6JBTT4XKVz0nuiRm4D82Ch1zxunxh9JzzNTCXCg+GiQ98gENGHOurHWt+uYH7Y2H0UK3f2n7kGmG5gnolJVdOWKq5XFPLZPYKYgAT/mgnJo2EiMsZXn2olgC8Mj8S7euCBWdNboE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d27021ee9d14b5a5cfd235454019ff0e8af9b0d606de1310087a04fec3d318ec" Description="" Url=""><as:assemblyIdentity name="MineplexKillsDeaths.exe" version="1.0.0.5" publicKeyToken="b5e51ed5fe2fd242" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=AARON-DELL\Aaron</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>C3BZnnEYznWFn6/i36/Gk2EuJ/b0FCwN5Ld067NTGPQ=</DigestValue></Reference></SignedInfo><SignatureValue>ddq+RVhi/xOK0ebrZBZ+HT7RpUyB/8fGcDaX9KED4ey/5XaKOZlOSZVTwF+wXhYq7RHBIeZsXl4koTmWapUMig5CLsBTttq8mlDlQHumEgj5GHJO60C3RTIRkJYYKED6VQVopetZnxX9rtB/9VGSWJ4RDGYiQ9jh0qjOpfWbZLY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>nHD/Tw/H3aXSzUalCDgr7sejdhLd8gaKZLD6JBTT4XKVz0nuiRm4D82Ch1zxunxh9JzzNTCXCg+GiQ98gENGHOurHWt+uYH7Y2H0UK3f2n7kGmG5gnolJVdOWKq5XFPLZPYKYgAT/mgnJo2EiMsZXn2olgC8Mj8S7euCBWdNboE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQM0c1QWyClbVMrW0sorEfEjANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAAQQBBAFIATwBOAC0ARABFAEwATABcAEEAYQByAG8AbjAeFw0xNDExMjMwNzAxNTdaFw0xNTExMjMxMzAxNTdaMCsxKTAnBgNVBAMeIABBAEEAUgBPAE4ALQBEAEUATABMAFwAQQBhAHIAbwBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCccP9PD8fdpdLNRqUIOCvux6N2Et3yBopksPokFNPhcpXPSe6JGbgPzYKHXPG6fGH0nPM1MJcKD4aJD3yAQ0Yc66sda365gftjYfRQrd/afuQaYbmCeiUlV05YqrlcU8tk9gpiABP+aCcmjYSIyxlefaiWALwyPxLt64IFZ01ugQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBACahyTUAZpy/1qaBnFDlqNDxqFXMEelynX/5Z8g/8OVAPUab9jpq/r0SNkoujyi/JY7Uyss4HohE+AS3XvGY/OprFDHBfWIm0lrce3zrxUEnm5vS3JhfP/lQ7oz15zhF4axNKOfzdkwnE+sf35IO5B3voVC3AEk/Cc5OqK3PSOIT</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
