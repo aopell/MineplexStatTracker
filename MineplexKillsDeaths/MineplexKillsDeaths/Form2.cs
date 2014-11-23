@@ -71,9 +71,11 @@ namespace MineplexStatTracker
 
         private void button2_Click(object sender, EventArgs e)
         {
+            colorDialog1.Color = Settings.Default.BackColor;
             MessageBox.Show("Pick a background color");
             colorDialog1.ShowDialog();
             Settings.Default.BackColor = colorDialog1.Color;
+            colorDialog1.Color = Settings.Default.TextColor;
             MessageBox.Show("Pick a text color");
             colorDialog1.ShowDialog();
             Settings.Default.TextColor = colorDialog1.Color;

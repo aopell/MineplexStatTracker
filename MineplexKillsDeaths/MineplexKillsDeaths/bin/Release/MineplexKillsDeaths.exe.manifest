@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="MineplexKillsDeaths.exe" version="1.1.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="MineplexKillsDeaths" version="1.1.6.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="MineplexKillsDeaths" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="MineplexKillsDeaths.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="59904">
-      <assemblyIdentity name="MineplexKillsDeaths" version="1.1.6.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="60416">
+      <assemblyIdentity name="MineplexKillsDeaths" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1mhjbD++DLL7sidA6X48bebcVkFKCWgAbRd/1CNCi/o=</dsig:DigestValue>
+        <dsig:DigestValue>rEoUQ7OOx/aIuOfGTzbHBiR5pPotROdeKLYsN4exLE4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

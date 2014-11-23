@@ -29,8 +29,6 @@ namespace MineplexStatTracker
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Reset();
-
             this.Text = Application.ProductName + " " + Application.ProductVersion;
 
             if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Mineplex Stats") || Properties.Settings.Default.Username == "")
@@ -280,7 +278,7 @@ namespace MineplexStatTracker
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Properties.Settings.Default.Save();
+            Settings.Default.Save();
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -297,6 +295,10 @@ namespace MineplexStatTracker
                 deathLabel.ForeColor = DefaultForeColor;
                 kdrLabel.ForeColor = DefaultForeColor;
                 rankLabel.ForeColor = Color.DarkViolet;
+                killList.BackColor = SystemColors.Window;
+                deathList.BackColor = SystemColors.Window;
+                killList.ForeColor = DefaultForeColor;
+                deathList.ForeColor = DefaultForeColor;
             }
             else if (Settings.Default.Theme == "Nathan")
             {
@@ -310,6 +312,11 @@ namespace MineplexStatTracker
                 deathLabel.ForeColor = Color.Red;
                 kdrLabel.ForeColor = Color.Red;
                 rankLabel.ForeColor = Color.Red;
+                killList.ForeColor = Color.Red;
+                deathList.ForeColor = Color.Red;
+                killList.BackColor = Color.Yellow;
+                deathList.BackColor = Color.Yellow;
+
             }
             else if(Settings.Default.Theme == "Custom")
             {
@@ -323,6 +330,10 @@ namespace MineplexStatTracker
                 deathLabel.ForeColor = Settings.Default.TextColor;
                 kdrLabel.ForeColor = Settings.Default.TextColor;
                 rankLabel.ForeColor = Settings.Default.TextColor;
+                killList.ForeColor = Settings.Default.TextColor;
+                deathList.ForeColor = Settings.Default.TextColor;
+                killList.BackColor = Settings.Default.BackColor;
+                deathList.BackColor = Settings.Default.BackColor;
             }
         }
 
