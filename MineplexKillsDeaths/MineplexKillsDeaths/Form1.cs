@@ -364,5 +364,17 @@ namespace MineplexStatTracker
         private void Form1_Enter(object sender, EventArgs e)
         {
         }
+
+        private void deathList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            deathList.Items.RemoveAt(deathList.SelectedIndex);
+            deaths--;
+        }
+
+        private void killList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            killList.Items.RemoveAt(deathList.SelectedIndex);
+            kills--;
+        }
     }
 }

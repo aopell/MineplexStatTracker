@@ -59,6 +59,7 @@
             this.killList.Name = "killList";
             this.killList.Size = new System.Drawing.Size(462, 342);
             this.killList.TabIndex = 0;
+            this.killList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.killList_MouseDoubleClick);
             // 
             // deathList
             // 
@@ -68,6 +69,7 @@
             this.deathList.Name = "deathList";
             this.deathList.Size = new System.Drawing.Size(467, 342);
             this.deathList.TabIndex = 1;
+            this.deathList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.deathList_MouseDoubleClick);
             // 
             // label1
             // 
