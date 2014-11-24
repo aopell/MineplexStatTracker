@@ -367,14 +367,20 @@ namespace MineplexStatTracker
 
         private void deathList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            deathList.Items.RemoveAt(deathList.SelectedIndex);
-            deaths--;
+            if (deathList.SelectedIndices.Count > 0)
+            {
+                deathList.Items.RemoveAt(deathList.SelectedIndex);
+                deaths--;
+            }
         }
 
         private void killList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            killList.Items.RemoveAt(deathList.SelectedIndex);
-            kills--;
+            if (killList.SelectedIndices.Count > 0)
+            {
+                killList.Items.RemoveAt(killList.SelectedIndex);
+                kills--;
+            }
         }
     }
 }
