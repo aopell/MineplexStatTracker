@@ -20,6 +20,7 @@ namespace MineplexStatTracker
         }
 
         string logPath;
+        string logDir;
         int lastCheckedLine = 0;
         int kills = 0;
         int deaths = 0;
@@ -42,6 +43,7 @@ namespace MineplexStatTracker
             hide = Properties.Settings.Default.HideWindow;
 
             logPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\.minecraft\\logs\\latest.log";
+            logDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\.minecraft\\logs";
 
             stream = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             reader = new StreamReader(stream);
@@ -166,7 +168,11 @@ namespace MineplexStatTracker
                             notifyIcon2.Visible = true;
                             notifyIcon2.ShowBalloonTip(10000, "Reset or Log?", "Click this message to log statistics.\nStats will be reset if you do not click this message.", ToolTipIcon.Warning);
                         }
+
+                        notifyIcon1.ShowBalloonTip(10000, "Game Stats", String.Format("Game: {0}\nTeam: {1}\nKills: {2}\nDeaths: {3}\nK/D Ratio: {4}", gameLabel.Text, teamLabel.Text, killLabel.Text, deathLabel.Text, kdrLabel.Text), ToolTipIcon.Info);
                     }
+
+                    lastCheckedLine = 0;
 
                     teamLabel.Text = s.Substring(s.IndexOf("joined") + 7);
                 }
@@ -255,7 +261,7 @@ namespace MineplexStatTracker
         {
             timer1.Enabled = true;
             this.TopMost = false;
-            if (hide)
+            if (Settings.Default.HideWindow)
             {
                 this.WindowState = FormWindowState.Minimized;
             }
@@ -371,7 +377,7 @@ namespace MineplexStatTracker
                 }
 
             }
-            else if (Settings.Default.Theme == "Custom")
+            else if (Settings.Default.Theme == "Custom" || Settings.Default.Theme == "Windows3.1" || Settings.Default.Theme == "SkyBlueText" || Settings.Default.Theme == "CommandPrompt")
             {
                 this.BackColor = Settings.Default.BackColor;
                 label1.ForeColor = Settings.Default.TextColor;

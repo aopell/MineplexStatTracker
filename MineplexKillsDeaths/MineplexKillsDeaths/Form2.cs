@@ -24,7 +24,7 @@ namespace MineplexStatTracker
             if (textBox1.Text != "")
             {
                 Properties.Settings.Default.Username = textBox1.Text;
-                Properties.Settings.Default.HideWindow = checkBox1.Checked;
+                Properties.Settings.Default.HideWindow = radioButton2.Checked;
                 Settings.Default.ForceAction = checkBox2.Checked;
                 Properties.Settings.Default.Save();
                 this.Close();
@@ -40,7 +40,9 @@ namespace MineplexStatTracker
             panel1.BackColor = Settings.Default.BackColor;
             panel2.BackColor = Settings.Default.TextColor;
             textBox1.Text = Properties.Settings.Default.Username;
-            checkBox1.Checked = Properties.Settings.Default.HideWindow;
+            radioButton2.Checked = Properties.Settings.Default.HideWindow;
+            radioButton1.Checked = !radioButton2.Checked;
+            checkBox2.Enabled = !radioButton2.Checked;
             comboBox1.SelectedItem = Settings.Default.Theme;
             checkBox2.Checked = Settings.Default.ForceAction;
         }
@@ -75,7 +77,34 @@ namespace MineplexStatTracker
                 panel1.BackColor = Settings.Default.BackColor;
                 panel2.BackColor = Settings.Default.TextColor;
             }
-            else if(comboBox1.SelectedIndex == 3)
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                Settings.Default.Theme = "Windows3.1";
+                button2.Enabled = false;
+                Settings.Default.BackColor = Color.Blue;
+                Settings.Default.TextColor = Color.White;
+                panel1.BackColor = Settings.Default.BackColor;
+                panel2.BackColor = Settings.Default.TextColor;
+            }
+            else if (comboBox1.SelectedIndex == 4)
+            {
+                Settings.Default.Theme = "SkyBlueText";
+                button2.Enabled = false;
+                Settings.Default.TextColor = Color.FromArgb(99, 180, 251);
+                Settings.Default.BackColor = Color.White;
+                panel1.BackColor = Settings.Default.BackColor;
+                panel2.BackColor = Settings.Default.TextColor;
+            }
+            else if(comboBox1.SelectedIndex == 5)
+            {
+                Settings.Default.Theme = "CommandPrompt";
+                button2.Enabled = false;
+                Settings.Default.TextColor = Color.White;
+                Settings.Default.BackColor = Color.Black;
+                panel1.BackColor = Settings.Default.BackColor;
+                panel2.BackColor = Settings.Default.TextColor;
+            }
+            else if(comboBox1.SelectedIndex == comboBox1.Items.Count - 1)
             {
                 //Custom
                 Settings.Default.Theme = "Custom";
@@ -97,9 +126,14 @@ namespace MineplexStatTracker
             panel2.BackColor = Settings.Default.TextColor;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            if(checkBox1.Checked)
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
             {
                 checkBox2.Enabled = false;
             }
@@ -109,9 +143,9 @@ namespace MineplexStatTracker
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            
         }
     }
 }
