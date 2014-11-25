@@ -25,6 +25,7 @@ namespace MineplexStatTracker
             {
                 Properties.Settings.Default.Username = textBox1.Text;
                 Properties.Settings.Default.HideWindow = checkBox1.Checked;
+                Settings.Default.ForceAction = checkBox2.Checked;
                 Properties.Settings.Default.Save();
                 this.Close();
             }
@@ -36,9 +37,12 @@ namespace MineplexStatTracker
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            panel1.BackColor = Settings.Default.BackColor;
+            panel2.BackColor = Settings.Default.TextColor;
             textBox1.Text = Properties.Settings.Default.Username;
             checkBox1.Checked = Properties.Settings.Default.HideWindow;
             comboBox1.SelectedItem = Settings.Default.Theme;
+            checkBox2.Checked = Settings.Default.ForceAction;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,15 +57,25 @@ namespace MineplexStatTracker
             }
             else if(comboBox1.SelectedIndex == 1)
             {
-                //Nathan
-                Settings.Default.Theme = "Nathan";
+                //NathanWorse
+                Settings.Default.Theme = "NathanWorse";
                 button2.Enabled = false;
                 Settings.Default.BackColor = Color.Yellow;
                 Settings.Default.TextColor = Color.Red;
                 panel1.BackColor = Settings.Default.BackColor;
                 panel2.BackColor = Settings.Default.TextColor;
             }
-            else if(comboBox1.SelectedIndex == 2)
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                //NathanBetter
+                Settings.Default.Theme = "NathanBetter";
+                button2.Enabled = false;
+                Settings.Default.BackColor = Color.Red;
+                Settings.Default.TextColor = Color.Yellow;
+                panel1.BackColor = Settings.Default.BackColor;
+                panel2.BackColor = Settings.Default.TextColor;
+            }
+            else if(comboBox1.SelectedIndex == 3)
             {
                 //Custom
                 Settings.Default.Theme = "Custom";
@@ -81,6 +95,23 @@ namespace MineplexStatTracker
             Settings.Default.TextColor = colorDialog1.Color;
             panel1.BackColor = Settings.Default.BackColor;
             panel2.BackColor = Settings.Default.TextColor;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                checkBox2.Enabled = false;
+            }
+            else
+            {
+                checkBox2.Enabled = true;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

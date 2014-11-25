@@ -61,7 +61,7 @@ namespace MineplexStatTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Window")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Menu")]
         public global::System.Drawing.Color BackColor {
             get {
                 return ((global::System.Drawing.Color)(this["BackColor"]));
@@ -80,6 +80,18 @@ namespace MineplexStatTracker.Properties {
             }
             set {
                 this["TextColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ForceAction {
+            get {
+                return ((bool)(this["ForceAction"]));
+            }
+            set {
+                this["ForceAction"] = value;
             }
         }
     }

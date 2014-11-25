@@ -45,7 +45,7 @@ namespace MineplexStatTracker
 
             stream = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             reader = new StreamReader(stream);
-            
+
             while (!reader.EndOfStream)
             {
                 reader.ReadLine();
@@ -152,10 +152,21 @@ namespace MineplexStatTracker
                 }
                 else if (s.ToLower().Contains("team> you joined") && !s.ToLower().Contains("chasers"))
                 {
-                    this.WindowState = FormWindowState.Normal;
-                    timer1.Enabled = false;
-                    timer2.Enabled = true;
-                    this.TopMost = true;
+                    if (Settings.Default.HideWindow)
+                    {
+                        this.WindowState = FormWindowState.Normal;
+                        timer1.Enabled = false;
+                        timer2.Enabled = true;
+                        this.TopMost = true;
+                    }
+                    else
+                    {
+                        if (Settings.Default.ForceAction)
+                        {
+                            notifyIcon2.Visible = true;
+                            notifyIcon2.ShowBalloonTip(10000, "Reset or Log?", "Click this message to log statistics.\nStats will be reset if you do not click this message.", ToolTipIcon.Warning);
+                        }
+                    }
 
                     teamLabel.Text = s.Substring(s.IndexOf("joined") + 7);
                 }
@@ -232,7 +243,7 @@ namespace MineplexStatTracker
             File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Mineplex Stats\\" + filename, toWrite);
             notifyIcon1.ShowBalloonTip(5000, "Saved Log File", "Saved in My Documents > Mineplex Stats > " + filename, ToolTipIcon.Info);
             reset();
-        } 
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -244,7 +255,7 @@ namespace MineplexStatTracker
         {
             timer1.Enabled = true;
             this.TopMost = false;
-            if(hide)
+            if (hide)
             {
                 this.WindowState = FormWindowState.Minimized;
             }
@@ -253,7 +264,7 @@ namespace MineplexStatTracker
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            if(WindowState == FormWindowState.Minimized)
+            if (WindowState == FormWindowState.Minimized)
             {
             }
         }
@@ -273,7 +284,7 @@ namespace MineplexStatTracker
 
         private void button4_Click(object sender, EventArgs e)
         {
-           this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -283,7 +294,7 @@ namespace MineplexStatTracker
 
         private void Form1_Activated(object sender, EventArgs e)
         {
-            if(Settings.Default.Theme == "Default")
+            if (Settings.Default.Theme == "Default")
             {
                 this.BackColor = DefaultBackColor;
                 label1.ForeColor = Color.Green;
@@ -308,7 +319,7 @@ namespace MineplexStatTracker
                     }
                 }
             }
-            else if (Settings.Default.Theme == "Nathan")
+            else if (Settings.Default.Theme == "NathanWorse")
             {
                 this.BackColor = Color.Yellow;
                 label1.ForeColor = Color.Red;
@@ -334,7 +345,33 @@ namespace MineplexStatTracker
                 }
 
             }
-            else if(Settings.Default.Theme == "Custom")
+            else if (Settings.Default.Theme == "NathanBetter")
+            {
+                this.BackColor = Color.Red;
+                label1.ForeColor = Color.Yellow;
+                label2.ForeColor = Color.Yellow;
+                label3.ForeColor = Color.Yellow;
+                gameLabel.ForeColor = Color.Yellow;
+                teamLabel.ForeColor = Color.Yellow;
+                killLabel.ForeColor = Color.Yellow;
+                deathLabel.ForeColor = Color.Yellow;
+                kdrLabel.ForeColor = Color.Yellow;
+                rankLabel.ForeColor = Color.Yellow;
+                killList.ForeColor = Color.Yellow;
+                deathList.ForeColor = Color.Yellow;
+                killList.BackColor = Color.Red;
+                deathList.BackColor = Color.Red;
+                foreach (Control c in Controls)
+                {
+                    if (c.GetType() == typeof(Button))
+                    {
+                        c.ForeColor = Color.Yellow;
+                        c.BackColor = Color.Red;
+                    }
+                }
+
+            }
+            else if (Settings.Default.Theme == "Custom")
             {
                 this.BackColor = Settings.Default.BackColor;
                 label1.ForeColor = Settings.Default.TextColor;
@@ -350,7 +387,7 @@ namespace MineplexStatTracker
                 deathList.ForeColor = Settings.Default.TextColor;
                 killList.BackColor = Settings.Default.BackColor;
                 deathList.BackColor = Settings.Default.BackColor;
-                foreach(Control c in Controls)
+                foreach (Control c in Controls)
                 {
                     if (c.GetType() == typeof(Button))
                     {
@@ -380,6 +417,67 @@ namespace MineplexStatTracker
             {
                 killList.Items.RemoveAt(killList.SelectedIndex);
                 kills--;
+            }
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_BalloonTipClosed(object sender, EventArgs e)
+        {
+
+        }
+
+        bool clicked = false;
+
+        private void notifyIcon2_BalloonTipClicked(object sender, EventArgs e)
+        {
+            clicked = true;
+            MessageBox.Show("Clicked");
+            string filename = DateTime.Now.ToString("MM-dd-yy-hh-mm-ss") + "-" + gameLabel.Text + ".log";
+            List<string> toWrite = new List<string>();
+            toWrite.Add(DateTime.Now.ToString("MM/dd/yy hh:mm:ss"));
+            toWrite.Add("");
+            toWrite.Add("Game: " + gameLabel.Text);
+            toWrite.Add("Team: " + teamLabel.Text);
+            toWrite.Add("");
+            toWrite.Add("Kills: " + kills);
+            toWrite.Add("Deaths: " + deaths);
+            toWrite.Add("Kill/Death Ratio: " + kdr);
+            toWrite.Add(rankLabel.Text);
+            toWrite.Add("");
+            toWrite.Add("Kill Log:");
+            toWrite.Add("");
+            foreach (string kill in killList.Items)
+            {
+                toWrite.Add(kill);
+            }
+            toWrite.Add("");
+            toWrite.Add("Death Log:");
+            toWrite.Add("");
+            foreach (string death in deathList.Items)
+            {
+                toWrite.Add(death);
+            }
+            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Mineplex Stats"))
+            {
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Mineplex Stats");
+            }
+
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Mineplex Stats\\" + filename, toWrite);
+            notifyIcon1.ShowBalloonTip(5000, "Saved Log File", "Saved in My Documents > Mineplex Stats > " + filename, ToolTipIcon.Info);
+            reset();
+            clicked = false;
+        }
+
+        private void notifyIcon2_BalloonTipClosed(object sender, EventArgs e)
+        {
+            if (!clicked)
+            {
+                notifyIcon1.ShowBalloonTip(5000, "Reset Stats", "Game stats were reset.", ToolTipIcon.Info);
+                reset();
             }
         }
     }

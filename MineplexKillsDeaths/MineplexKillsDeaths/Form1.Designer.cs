@@ -48,6 +48,7 @@
             this.teamLabel = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
+            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // killList
@@ -166,6 +167,8 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
+            this.notifyIcon1.BalloonTipClosed += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // button2
@@ -228,6 +231,14 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // notifyIcon2
+            // 
+            this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
+            this.notifyIcon2.Text = "notifyIcon2";
+            this.notifyIcon2.Visible = true;
+            this.notifyIcon2.BalloonTipClicked += new System.EventHandler(this.notifyIcon2_BalloonTipClicked);
+            this.notifyIcon2.BalloonTipClosed += new System.EventHandler(this.notifyIcon2_BalloonTipClosed);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -285,6 +296,7 @@
         private System.Windows.Forms.Label teamLabel;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.NotifyIcon notifyIcon2;
     }
 }
 

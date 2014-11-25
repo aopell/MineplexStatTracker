@@ -12,10 +12,13 @@
       <Value Profile="(Default)">Default</Value>
     </Setting>
     <Setting Name="BackColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Window</Value>
+      <Value Profile="(Default)">Menu</Value>
     </Setting>
     <Setting Name="TextColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">WindowText</Value>
+    </Setting>
+    <Setting Name="ForceAction" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>
