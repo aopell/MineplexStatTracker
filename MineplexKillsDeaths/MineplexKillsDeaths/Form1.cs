@@ -435,7 +435,6 @@ namespace MineplexStatTracker
         private void notifyIcon2_BalloonTipClicked(object sender, EventArgs e)
         {
             clicked = true;
-            MessageBox.Show("Clicked");
             string filename = DateTime.Now.ToString("MM-dd-yy-hh-mm-ss") + "-" + gameLabel.Text + ".log";
             List<string> toWrite = new List<string>();
             toWrite.Add(DateTime.Now.ToString("MM/dd/yy hh:mm:ss"));
