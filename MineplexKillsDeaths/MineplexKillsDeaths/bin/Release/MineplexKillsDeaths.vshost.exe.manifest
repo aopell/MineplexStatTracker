@@ -4,7 +4,7 @@
   <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="MineplexKillsDeaths" version="1.4.4.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="MineplexKillsDeaths" version="1.4.5.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="MineplexKillsDeaths.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="623104">
-      <assemblyIdentity name="MineplexKillsDeaths" version="1.4.4.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MineplexKillsDeaths" version="1.4.5.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0fMzf0qqPoYvd07p2TT4pcTq0muIbTyJ80a6mHAbNpk=</dsig:DigestValue>
+        <dsig:DigestValue>JW662yj0PiVE2P5pbJUYMeP9losBPA2mJaemt+aty0g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -172,8 +172,6 @@ namespace MineplexStatTracker
                         notifyIcon1.ShowBalloonTip(10000, "Game Stats", String.Format("Game: {0}\nTeam: {1}\nKills: {2}\nDeaths: {3}\nK/D Ratio: {4}", gameLabel.Text, teamLabel.Text, killLabel.Text, deathLabel.Text, kdrLabel.Text), ToolTipIcon.Info);
                     }
 
-                    lastCheckedLine = 0;
-
                     teamLabel.Text = s.Substring(s.IndexOf("joined") + 7);
                 }
 
