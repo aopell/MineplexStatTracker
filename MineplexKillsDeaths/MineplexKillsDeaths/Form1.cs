@@ -163,13 +163,15 @@ namespace MineplexStatTracker
                     }
                     else
                     {
+                        string[] lastStats = { gameLabel.Text, teamLabel.Text, killLabel.Text, deathLabel.Text, kdrLabel.Text };
+
                         if (Settings.Default.ForceAction)
                         {
                             notifyIcon2.Visible = true;
                             notifyIcon2.ShowBalloonTip(10000, "Reset or Log?", "Click this message to log statistics.\nStats will be reset if you do not click this message.", ToolTipIcon.Warning);
                         }
 
-                        notifyIcon1.ShowBalloonTip(10000, "Game Stats", String.Format("Game: {0}\nTeam: {1}\nKills: {2}\nDeaths: {3}\nK/D Ratio: {4}", gameLabel.Text, teamLabel.Text, killLabel.Text, deathLabel.Text, kdrLabel.Text), ToolTipIcon.Info);
+                        notifyIcon1.ShowBalloonTip(10000, "Game Stats", String.Format("Game: {0}\nTeam: {1}\nKills: {2}\nDeaths: {3}\nK/D Ratio: {4}", lastStats), ToolTipIcon.Info);
                     }
 
                     teamLabel.Text = s.Substring(s.IndexOf("joined") + 7);
