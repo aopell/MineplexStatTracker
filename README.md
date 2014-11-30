@@ -1,6 +1,7 @@
 Mineplex Stat Tracker
 © 2014 Aaron Opell
 ===================
+
 ***This program is not affiliated in any way with Mojang
 ***This program is in no way affiliated with Mineplex
 ***and really is just a program that reads the Minecraft chat log
