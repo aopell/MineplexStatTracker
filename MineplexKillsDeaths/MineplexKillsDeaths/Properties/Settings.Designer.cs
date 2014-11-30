@@ -94,5 +94,17 @@ namespace MineplexStatTracker.Properties {
                 this["ForceAction"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoReset {
+            get {
+                return ((bool)(this["AutoReset"]));
+            }
+            set {
+                this["AutoReset"] = value;
+            }
+        }
     }
 }

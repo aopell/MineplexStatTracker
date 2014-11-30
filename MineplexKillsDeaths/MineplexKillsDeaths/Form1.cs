@@ -171,7 +171,12 @@ namespace MineplexStatTracker
                             notifyIcon2.ShowBalloonTip(10000, "Reset or Log?", "Click this message to log statistics.\nStats will be reset if you do not click this message.", ToolTipIcon.Warning);
                         }
 
-                        notifyIcon1.ShowBalloonTip(10000, "Game Stats", String.Format("Game: {0}\nTeam: {1}\nKills: {2}\nDeaths: {3}\nK/D Ratio: {4}", lastStats), ToolTipIcon.Info);
+                        if(Settings.Default.AutoReset)
+                        {
+                            reset();
+                        }
+
+                        notifyIcon1.ShowBalloonTip(10000, "Last Game Stats", String.Format("Game: {0}\nTeam: {1}\nKills: {2}\nDeaths: {3}\nK/D Ratio: {4}", lastStats), ToolTipIcon.Info);
                     }
 
                     teamLabel.Text = s.Substring(s.IndexOf("joined") + 7);

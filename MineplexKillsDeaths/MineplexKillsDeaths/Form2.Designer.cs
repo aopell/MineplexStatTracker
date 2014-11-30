@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +63,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(162, 185);
+            this.button1.Location = new System.Drawing.Point(164, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -73,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 139);
+            this.label2.Location = new System.Drawing.Point(14, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 4;
@@ -82,7 +83,7 @@
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(314, 132);
+            this.button2.Location = new System.Drawing.Point(316, 142);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -101,7 +102,7 @@
             "Sky Blue Text",
             "Command Prompt",
             "Custom"});
-            this.comboBox1.Location = new System.Drawing.Point(58, 134);
+            this.comboBox1.Location = new System.Drawing.Point(60, 144);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(250, 21);
             this.comboBox1.TabIndex = 6;
@@ -112,7 +113,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(354, 160);
+            this.panel1.Location = new System.Drawing.Point(356, 170);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(35, 21);
             this.panel1.TabIndex = 7;
@@ -121,7 +122,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(355, 187);
+            this.panel2.Location = new System.Drawing.Point(357, 197);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(34, 21);
             this.panel2.TabIndex = 8;
@@ -140,7 +141,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(287, 162);
+            this.label4.Location = new System.Drawing.Point(289, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 39);
             this.label4.TabIndex = 11;
@@ -170,11 +171,22 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(15, 120);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(79, 17);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "Auto Reset";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(401, 221);
+            this.ClientSize = new System.Drawing.Size(401, 227);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label4);
@@ -211,5 +223,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

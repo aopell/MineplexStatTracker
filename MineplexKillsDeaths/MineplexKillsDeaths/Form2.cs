@@ -26,6 +26,7 @@ namespace MineplexStatTracker
                 Properties.Settings.Default.Username = textBox1.Text;
                 Properties.Settings.Default.HideWindow = radioButton2.Checked;
                 Settings.Default.ForceAction = checkBox2.Checked;
+                Settings.Default.AutoReset = checkBox1.Checked;
                 Properties.Settings.Default.Save();
                 this.Close();
             }
@@ -45,6 +46,7 @@ namespace MineplexStatTracker
             checkBox2.Enabled = !radioButton2.Checked;
             comboBox1.SelectedItem = Settings.Default.Theme;
             checkBox2.Checked = Settings.Default.ForceAction;
+            checkBox1.Checked = Settings.Default.AutoReset;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

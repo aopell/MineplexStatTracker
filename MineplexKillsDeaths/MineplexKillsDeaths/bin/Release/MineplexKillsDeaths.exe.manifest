@@ -4,7 +4,7 @@
   <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="MineplexKillsDeaths" version="1.4.6.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="MineplexKillsDeaths" version="1.4.7.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="MineplexKillsDeaths.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MineplexKillsDeaths.exe" size="623104">
-      <assemblyIdentity name="MineplexKillsDeaths" version="1.4.6.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MineplexKillsDeaths" version="1.4.7.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+BOpq+VLkpfsYtjE7Fh5W0OzGtwIccK8SE/FtZZesu4=</dsig:DigestValue>
+        <dsig:DigestValue>x7sNgZfE+x1OLXR07aLejkcDmbDM/Gcd3w+MqbO6Wgk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>t6y9XcclReg7EDKvzaYefkZwDkgg31ggDDj88SAUIPg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MineplexKillsDeaths.exe.config" size="2162">
+  <file name="MineplexKillsDeaths.exe.config" size="2285">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HhmkRBQ8iKfosu3BFnk5KwtOY4GAcg/OmmwCJrIUBRU=</dsig:DigestValue>
+      <dsig:DigestValue>O8Cj7lLltWdarrAhFk9nU+CJ8WPU0AZ3pWy0dhhRWC8=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
