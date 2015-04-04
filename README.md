@@ -13,5 +13,3 @@ There are two commands which can be executed on the Mineplex server which intera
 **/? l** - Will log statistics recorded by the program to a file in Documents\Mineplex Stats\Logs
 
 This program will not likely be updated much more.
-
-© 2014 Aaron Opell
