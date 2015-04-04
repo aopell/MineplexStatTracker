@@ -13,3 +13,7 @@ There are two commands which can be executed on the Mineplex server which intera
 **/? l** - Will log statistics recorded by the program to a file in Documents\Mineplex Stats\Logs
 
 This program will not likely be updated much more.
+
+###License
+
+Licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0). See the [license](/license) file for more information.
